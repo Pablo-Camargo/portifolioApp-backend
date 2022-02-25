@@ -1,13 +1,16 @@
 class AddComentario{
   index(req,res){
+     const {nome, comentario} = req.body
       return res.json({
+
         'texto':'ok',
       })
   }
    show(req,res){
 
   }
- async  store(req,res){
+ store(req,res){
+  
 
 
      
