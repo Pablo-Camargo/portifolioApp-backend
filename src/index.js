@@ -4,11 +4,12 @@ import routes from './router';
 
 import './database'
 const app = express();
+//app.use(express.json());
+
+app.use(express.urlencoded());
 app.use(express.json());
 
-
-
-app.use(express.urlencoded({extended:false}));
+//app.use(express.urlencoded({extended:false}));
 app.use(cors());
 app.use(routes)
 

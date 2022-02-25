@@ -1,3 +1,5 @@
+import addComentarios from '../models/addComentarioModels';
+
 class AddComentario{
   index(req,res){
      const {nome, comentario} = req.body
@@ -10,18 +12,12 @@ class AddComentario{
 
   }
  store(req,res){
-  
-
-
-     
-    return res.json({
-
-      'nome':req,
-
-     })
-     const nome = req.body.nome;
-     const comentario = req.body.comentario;
-
+    const nome = req.body.nome;
+    const comentario = req.body.comentario;
+    addComentarios.setComentario(nome,comentario)
+    res.end()
+    
+    
   }
    update(req,res){
 
