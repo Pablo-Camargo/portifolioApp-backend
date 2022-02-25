@@ -6,7 +6,7 @@ const routes = new Router();
 
 routes.get('/',AddComentario.index);
 routes.get('/comenta/:id',AddComentario.show);
-routes.post('/comenta',AddComentario.store);
+routes.post('/post',AddComentario.store);
 routes.put('/comenta/:id',AddComentario.update);
 routes.delete('/comenta',AddComentario.delete);
 
