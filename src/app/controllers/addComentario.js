@@ -8,6 +8,8 @@ class AddComentario{
 
   }
    store(req,res){
+     const nome = req.body.nome;
+     const comentario = req.body.comentario;
 
   }
    update(req,res){

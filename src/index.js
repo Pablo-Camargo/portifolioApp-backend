@@ -12,4 +12,4 @@ app.use(express.urlencoded({extended:false}));
 app.use(cors());
 app.use(routes)
 
-app.listen(8080)
+app.listen(process.env.PORT || 3001)
