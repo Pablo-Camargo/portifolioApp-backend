@@ -10,13 +10,9 @@ class AddComentarios{
    }
    
    setComentario(nome,comentario){
+      const coment =  Database.query("INSERT INTO `comentarios_portifolio` SET nome = '" + nome+ "', comentario = '" + comentario +"' ");
 
-    const comenta = Database.define('comentarios_portifolio', {
-        nome: Database.DataTypes.STRING,
-        comentario: Database.DataTypes.STRING,
-          
-    });
-     const coment = comenta.build({ 'nome':nome, 'comentario':comentario });
+    
 
       return (coment)
 
