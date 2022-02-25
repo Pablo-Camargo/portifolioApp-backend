@@ -7,11 +7,13 @@ class AddComentario{
    show(req,res){
 
   }
-   store(req,res){
-     console.log(req)
+ async  store(req,res){
+
+
+     
     return res.json({
 
-      'funfo':req.body,
+      'nome':req,
 
      })
      const nome = req.body.nome;
