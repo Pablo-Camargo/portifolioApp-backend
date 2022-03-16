@@ -1,19 +1,10 @@
-import Sequelize from "sequelize";
-import databaseConfig from '../config/database';
+const Sequelize = require('sequelize');
+const dbConfig = require('../config/database');
 
-const models =[];
+const Comentarios =  require('../app/models/comentarios')
 
-class Database{
-  constructor(){
-    this.init();
-  }
+const connection = new Sequelize(dbConfig);
 
-  init(){
-    this.connection = new Sequelize(databaseConfig);
-    models.map((model) => model.init(this.connection))
-          .map((model) => model.associate && model.associate(this.connection.models)
-          )
-  }
+Comentarios.init(connection);
 
-}
-export default new Database();
+module.exports = connection;

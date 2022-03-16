@@ -1,5 +1,5 @@
 {
-  "execMap":{
-    "js": "node -r sucrase/register -r dotenv/config"
+  "execMao":{
+    "js":"node -r suvrase/register -r dotenv/config"
   }
 }

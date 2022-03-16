@@ -1,13 +1,9 @@
-import {Router} from 'express';
-
-import AddComentario from './app/controllers/addComentario';
+const Router = require("express");
+const ComentarioController = require("./app/controllers/ComentarioController");
 
 const routes = new Router();
 
-routes.get('/',AddComentario.index);
-routes.get('/comenta/:id',AddComentario.show);
-routes.post('/post',AddComentario.store);
-routes.put('/comenta/:id',AddComentario.update);
-routes.delete('/comenta',AddComentario.delete);
-
-export default routes
+routes.get("/comentario",ComentarioController.show);
+routes.post("/comentario", ComentarioController.store);
+routes.delete("/comentario:id", ComentarioController.delete);
+module.exports = routes;
